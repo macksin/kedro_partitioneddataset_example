@@ -11,7 +11,7 @@ def create_pipeline(**kwargs) -> Pipeline:
     return pipeline([
         node(
             func=generate_big_data,
-            inputs=None,
+            inputs=["params:random_seed", "params:n_partitions", "params:sample_size"],
             outputs="partitioned_dataframe"
         )
     ])

@@ -23,11 +23,13 @@ def make_dataset(random_seed: int = 42, sample_size: int = 10) -> pd.DataFrame:
 
 def generate_big_data(
     random_seed: int = 42,
-    creation_size: int = 10
+    n_partitions: int = 10,
+    sample_size: int = 10
 ) -> Dict[str, Callable[[], Any]]:
 
     rng = np.random.seed(random_seed)
 
     return {
-        f"dataset_part_{i}": lambda: make_dataset(random_seed=rng)
-        for i in range(creation_size)}
+        f"dataset_part_{i}": lambda: make_dataset(random_seed=rng, 
+                                                  sample_size=sample_size)
+        for i in range(n_partitions)}
