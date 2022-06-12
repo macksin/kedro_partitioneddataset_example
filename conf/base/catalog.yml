@@ -2,3 +2,9 @@
 #
 # Documentation for this file format can be found in "The Data Catalog"
 # Link: https://kedro.readthedocs.io/en/stable/data/data_catalog.html
+
+partitioned_dataframe:
+  type: PartitionedDataSet
+  dataset: pandas.CSVDataSet
+  path: data/01_raw/partitioned_dataframe
+  filename_suffix: ".csv"
