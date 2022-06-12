@@ -2,9 +2,8 @@
 
 ## Overview
 
-This is your new Kedro project, which was generated using `Kedro 0.18.1`.
-
-Take a look at the [Kedro documentation](https://kedro.readthedocs.io) to get started.
+Sample project using the Kedro PartitionedDataSet implementation.
+In this project the assumption is that the machine **does not have memory to hold more than one partition**.
 
 ## Rules and guidelines
 
